@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tommy Yoon - Software Engineer</title>
+    <style>
+        :root {
+            --text-primary: #1d1d1f;
+            --text-secondary: #6e6e73;
+            --link-color: #0066cc;
+            --background: #fbfbfd;
+            --section-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: var(--text-primary);
+            background-color: var(--background);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: var(--section-bg);
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #1d1d1f 0%, #434344 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        section {
+            padding: 120px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: -0.015em;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .summary {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .skill-category {
+            text-align: center;
+            padding: 2rem;
+            background: var(--section-bg);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: scale(1.02);
+        }
+
+        .skill-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .skill-category p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .experience {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .job {
+            margin-bottom: 6rem;
+            padding: 3rem;
+            background: var(--section-bg);
+            border-radius: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .job:hover {
+            transform: translateY(-5px);
+        }
+
+        .job-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .job-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-company {
+            font-size: 1.25rem;
+            color: var(--link-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .job-period {
+            color: var(--text-secondary);
+        }
+
+        .job p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--link-color);
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .summary {
+                font-size: 1.25rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .job {
+                padding: 2rem;
+            }
+
+            .job-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .title {
+                font-size: 1.25rem;
+            }
+
+            .skill-category {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tommy Yoon</h1>
+        <div class="title">Software Engineer</div>
+    </header>
+
+    <div class="container">
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p class="summary">Seasoned software engineer with 15+ years of experience in full-stack development, specializing in inspection and reporting systems. Expert in implementing secure authentication solutions, modernizing legacy systems, and developing enterprise applications. Proven track record in leading technical initiatives at the FDA and managing mission-critical applications.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages & Frameworks</h3>
+                    <p>Java (J2EE, JavaFX), JavaScript, C#, Swift</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>AWS (EC2, RDS, IAM, Lambda), Git, SVN</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Security & Authentication</h3>
+                    <p>ICAM, MFA Implementation, SSL/TLS, Single Sign-On</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases & ORM</h3>
+                    <p>Oracle, Hibernate, Core Data</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Technologies</h3>
+                    <p>JSF, REST APIs, SOAP, XHTML, AJAX</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Development Tools</h3>
+                    <p>WebLogic, JDeveloper, Eclipse, Xcode</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Methodologies</h3>
+                    <p>Agile, SDLC, UML</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience">
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">IT Specialist</div>
+                        <div class="job-company">Food and Drug Administration</div>
+                        <div class="job-period">July 2010 - Present</div>
+                    </div>
+                    <p>Lead developer for FDA's Mammography Program Reporting and Information System (MPRIS)</p>
+                    <ul>
+                        <li>Implemented Multi-Factor Authentication (MFA) for web applications through ICAM integration, enhancing system security and regulatory compliance</li>
+                        <li>Led successful migration from SVN to Git, improving team collaboration and code management processes</li>
+                        <li>Architected and developed enterprise iOS mobile application with Core Data and REST APIs integration</li>
+                        <li>Designed and implemented AWS cloud infrastructure, including EC2, RDS, IAM, and Lambda services</li>
+                        <li>Developed and maintained JavaFX desktop application with Hibernate integration and Web services using SSL certificate authentication</li>
+                        <li>Enhanced J2EE applications using JSF, EJBs, Hibernate, and Oracle Database</li>
+                        <li>Developed and maintained secure SOAP and REST Web services</li>
+                        <li>Automated testing processes using Micro Focus UFT One, increasing test coverage and reliability</li>
+                        <li>Created comprehensive system documentation and Standard Operating Procedures for system maintenance and operations</li>
+                        <li>Mentored team developers and led technical knowledge sharing sessions</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Consultant</div>
+                        <div class="job-company">Booz Allen Hamilton</div>
+                        <div class="job-period">November 2009 - June 2010</div>
+                    </div>
+                    <p>Technical consulting for FDA's MPRIS system modernization initiatives</p>
+                    <ul>
+                        <li>Developed J2EE applications using JDeveloper IDE with Struts Framework</li>
+                        <li>Led systems analysis and architecture planning for legacy application migration</li>
+                        <li>Created detailed Software Requirements Specifications and Design Documentation</li>
+                        <li>Implemented automated testing solutions and streamlined deployment procedures</li>
+                        <li>Provided technical leadership in requirements gathering and use case development</li>
+                        <li>Delivered prototype applications demonstrating innovative solutions to stakeholders</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Software Engineer</div>
+                        <div class="job-company">Accenture</div>
+                        <div class="job-period">June 2007 - October 2009</div>
+                    </div>
+                    <p>Supported USPS regulatory processes for mail handling systems</p>
+                    <ul>
+                        <li>Architected and developed enterprise J2EE applications using Spring/Struts/Hibernate</li>
+                        <li>Designed and implemented web services and batch processing solutions for mail tracking systems</li>
+                        <li>Provided 24/7 technical support for nationwide USPS facilities</li>
+                        <li>Led on-site training and support during major software releases</li>
+                        <li>Developed and maintained Oracle database stored procedures for optimal performance</li>
+                        <li>Created automated testing suites using JUnit for business logic and web services</li>
+                        <li>Conducted performance optimization for high-volume transaction processing</li>
+                        <li>Managed deployment and integration across multiple USPS facilities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
