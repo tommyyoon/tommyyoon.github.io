@@ -6,8 +6,8 @@
     <title>Tommy Yoon - Software Engineer</title>
     <style>
         :root {
-            --text-primary: #1d1d1f;
-            --text-secondary: #6e6e73;
+            --text-primary: #000000;
+            --text-secondary: #333333;
             --link-color: #0066cc;
             --background: #fbfbfd;
             --section-bg: #ffffff;
@@ -34,7 +34,7 @@
         }
 
         header {
-            height: 100vh;
+            height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -49,9 +49,7 @@
             font-weight: 700;
             letter-spacing: -0.015em;
             margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #1d1d1f 0%, #434344 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--text-primary);
         }
 
         .title {
@@ -61,7 +59,7 @@
         }
 
         section {
-            padding: 120px 0;
+            padding: 60px 0;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease, transform 0.6s ease;
@@ -81,10 +79,10 @@
         }
 
         .summary {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             line-height: 1.6;
             color: var(--text-secondary);
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             text-align: center;
         }
@@ -92,31 +90,32 @@
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
         .skill-category {
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             background: var(--section-bg);
-            border-radius: 20px;
+            border-radius: 16px;
             transition: transform 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         .skill-category:hover {
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
 
         .skill-category h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
             color: var(--text-primary);
         }
 
         .skill-category p {
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .experience {
@@ -125,11 +124,12 @@
         }
 
         .job {
-            margin-bottom: 6rem;
-            padding: 3rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
             background: var(--section-bg);
-            border-radius: 30px;
+            border-radius: 16px;
             transition: transform 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         .job:hover {
